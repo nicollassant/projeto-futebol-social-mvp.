@@ -1,0 +1,144 @@
+:root {
+    --green-900: #124734;
+    --green-700: #1f6b4c;
+    --green-100: #e8f3ed;
+    --text: #24332b;
+    --muted: #53645a;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 7%;
+    background: var(--white);
+    border-bottom: 1px solid #dce7df;
+}
+
+.brand {
+    color: var(--green-900);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--green-900);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    text-decoration: underline;
+}
+
+.hero {
+    padding: 6rem 10%;
+    color: var(--white);
+    background: var(--green-900);
+}
+
+.hero h1 {
+    max-width: 760px;
+    margin: 0.5rem 0 1rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.12;
+}
+
+.hero p {
+    max-width: 680px;
+}
+
+.eyebrow {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    color: var(--green-900);
+    background: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #e2b84b;
+    outline-offset: 3px;
+}
+
+.content-section,
+.support-section {
+    padding: 3.5rem 10%;
+}
+
+.support-section {
+    background: var(--green-100);
+}
+
+.content-section h2,
+.support-section h2 {
+    color: var(--green-900);
+}
+
+.admin-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer {
+    padding: 1.5rem 7%;
+    color: var(--white);
+    background: var(--green-900);
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        padding: 4rem 7%;
+    }
+
+    .content-section,
+    .support-section {
+        padding: 2.5rem 7%;
+    }
+}
