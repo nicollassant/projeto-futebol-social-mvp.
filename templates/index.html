@@ -6,6 +6,7 @@
     <meta name="description" content="Conheça o projeto social de futebol e saiba como participar ou apoiar.">
     <title>Futebol Social | Início</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/acessibilidade.js') }}" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -17,6 +18,15 @@
             <a class="nav-admin" href="{{ url_for('novo_aluno') }}">Cadastrar aluno</a>
         </nav>
     </header>
+
+    <div class="accessibility-tools" role="group" aria-label="Opções de acessibilidade">
+        <span class="accessibility-title">Acessibilidade:</span>
+        <button type="button" id="contrast-toggle" aria-pressed="false">Alto contraste</button>
+        <button type="button" id="font-increase" aria-label="Aumentar tamanho da fonte">A +</button>
+        <button type="button" id="font-decrease" aria-label="Diminuir tamanho da fonte">A −</button>
+        <button type="button" id="font-reset">Fonte padrão</button>
+        <span id="accessibility-status" class="visually-hidden" aria-live="polite"></span>
+    </div>
 
     <main>
         <section class="hero" id="projeto">
