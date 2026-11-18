@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça o projeto social de futebol e saiba como participar ou apoiar.">
+    <title>Futebol Social | Início</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="{{ url_for('inicio') }}">Futebol Social</a>
+        <nav aria-label="Navegação principal">
+            <a href="#projeto">Conheça o projeto</a>
+            <a href="#atividades">Atividades</a>
+            <a href="#apoio">Quero apoiar</a>
+            <a class="nav-admin" href="#administracao">Área administrativa</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="projeto">
+            <p class="eyebrow">Esporte, convivência e oportunidade</p>
+            <h1>O futebol aproxima pessoas e fortalece a comunidade.</h1>
+            <p>Um projeto social que oferece aulas gratuitas de futebol para crianças e adolescentes.</p>
+            <a class="button" href="#atividades">Conheça as atividades</a>
+        </section>
+
+        <section class="content-section" id="atividades">
+            <h2>Como funciona</h2>
+            <p>As atividades acontecem aos sábados e domingos, em uma escola da comunidade. Para informações sobre participação, entre em contato com a coordenação do projeto.</p>
+        </section>
+
+        <section class="support-section" id="apoio">
+            <h2>Faça parte dessa iniciativa</h2>
+            <p>Pessoas e empresas interessadas em apoiar o projeto podem procurar a coordenação para conhecer as necessidades da iniciativa.</p>
+        </section>
+
+        <section class="content-section admin-section" id="administracao">
+            <h2>Área administrativa</h2>
+            <p>O acesso administrativo será disponibilizado após a implementação da autenticação.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto social de futebol — informação e participação para a comunidade.</p>
+    </footer>
+</body>
+</html>
