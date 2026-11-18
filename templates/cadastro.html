@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar aluno | Futebol Social</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="{{ url_for('inicio') }}">Futebol Social</a>
+        <nav aria-label="Navegação principal">
+            <a href="{{ url_for('inicio') }}">Página inicial</a>
+            <a href="{{ url_for('novo_aluno') }}">Cadastrar aluno</a>
+        </nav>
+    </header>
+
+    <main class="form-page">
+        <section class="form-card">
+            <p class="eyebrow form-eyebrow">Área administrativa · etapa de protótipo</p>
+            <h1>Cadastrar aluno</h1>
+            <p class="form-intro">Preencha os dados do aluno e de seu responsável.</p>
+
+            {% with mensagens = get_flashed_messages(with_categories=true) %}
+                {% if mensagens %}
+                    <div class="messages" aria-live="polite">
+                        {% for categoria, mensagem in mensagens %}
+                            <p class="message {{ categoria }}">{{ mensagem }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <form method="post" action="{{ url_for('novo_aluno') }}">
+                <fieldset>
+                    <legend>Dados do aluno</legend>
+                    <label for="nome">Nome completo do aluno <span aria-hidden="true">*</span></label>
+                    <input id="nome" name="nome" type="text" maxlength="100" required
+                           autocomplete="off" value="{{ dados.get('nome', '') }}">
+
+                    <label for="data_nascimento">Data de nascimento <span aria-hidden="true">*</span></label>
+                    <input id="data_nascimento" name="data_nascimento" type="date" required
+                           value="{{ dados.get('data_nascimento', '') }}">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dados do responsável</legend>
+                    <label for="nome_responsavel">Nome completo do responsável <span aria-hidden="true">*</span></label>
+                    <input id="nome_responsavel" name="nome_responsavel" type="text"
+                           maxlength="100" required value="{{ dados.get('nome_responsavel', '') }}">
+
+                    <label for="telefone">Telefone com DDD <span aria-hidden="true">*</span></label>
+                    <input id="telefone" name="telefone" type="tel" maxlength="20"
+                           placeholder="(11) 99999-9999" required
+                           value="{{ dados.get('telefone', '') }}">
+
+                    <label for="email">E-mail do responsável (opcional)</label>
+                    <input id="email" name="email" type="email" maxlength="100"
+                           value="{{ dados.get('email', '') }}">
+                </fieldset>
+
+                <p class="required-note">* Campos obrigatórios.</p>
+                <div class="form-actions">
+                    <button class="submit-button" type="submit">Validar cadastro</button>
+                    <a class="cancel-link" href="{{ url_for('inicio') }}">Voltar à página inicial</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer><p>Projeto social de futebol</p></footer>
+</body>
+</html>
