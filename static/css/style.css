@@ -142,3 +142,129 @@ footer {
         padding: 2.5rem 7%;
     }
 }
+
+
+/* Formulário de cadastro */
+.form-page {
+    min-height: 70vh;
+    padding: 3rem 1rem;
+    background: var(--green-100);
+}
+
+.form-card {
+    width: min(100%, 720px);
+    margin: 0 auto;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    border-radius: 12px;
+    background: var(--white);
+    box-shadow: 0 8px 28px rgba(18, 71, 52, 0.08);
+}
+
+.form-card h1 {
+    margin: 0.25rem 0;
+    color: var(--green-900);
+}
+
+.form-eyebrow {
+    color: var(--green-700);
+}
+
+.form-intro,
+.required-note {
+    color: var(--muted);
+}
+
+.form-card fieldset {
+    display: grid;
+    gap: 0.55rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border: 1px solid #cbdacf;
+    border-radius: 8px;
+}
+
+.form-card legend {
+    padding: 0 0.35rem;
+    color: var(--green-900);
+    font-weight: 700;
+}
+
+.form-card label {
+    margin-top: 0.45rem;
+    font-weight: 600;
+}
+
+.form-card input {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.7rem;
+    border: 1px solid #84968a;
+    border-radius: 6px;
+    color: var(--text);
+    background: var(--white);
+    font: inherit;
+}
+
+.form-card input:focus-visible {
+    outline: 3px solid #e2b84b;
+    outline-offset: 2px;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.submit-button {
+    min-height: 44px;
+    padding: 0.75rem 1.2rem;
+    border: 0;
+    border-radius: 6px;
+    color: var(--white);
+    background: var(--green-700);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: var(--green-900);
+}
+
+.cancel-link {
+    color: var(--green-900);
+    font-weight: 600;
+}
+
+.message {
+    padding: 0.85rem 1rem;
+    border-radius: 6px;
+}
+
+.message.error {
+    color: #7b1f1f;
+    background: #fbeaea;
+}
+
+.message.success {
+    color: #124734;
+    background: #e8f3ed;
+}
+
+@media (max-width: 600px) {
+    .form-page {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
