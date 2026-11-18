@@ -14,7 +14,7 @@
             <a href="#projeto">Conheça o projeto</a>
             <a href="#atividades">Atividades</a>
             <a href="#apoio">Quero apoiar</a>
-            <a class="nav-admin" href="#administracao">Área administrativa</a>
+            <a class="nav-admin" href="{{ url_for('novo_aluno') }}">Cadastrar aluno</a>
         </nav>
     </header>
 
@@ -36,9 +36,10 @@
             <p>Pessoas e empresas interessadas em apoiar o projeto podem procurar a coordenação para conhecer as necessidades da iniciativa.</p>
         </section>
 
-        <section class="content-section admin-section" id="administracao">
+        <section class="content-section admin-section">
             <h2>Área administrativa</h2>
-            <p>O acesso administrativo será disponibilizado após a implementação da autenticação.</p>
+            <p>O formulário de cadastro está disponível nesta etapa de desenvolvimento.</p>
+            <a class="button action-button" href="{{ url_for('novo_aluno') }}">Acessar cadastro de aluno</a>
         </section>
     </main>
 
