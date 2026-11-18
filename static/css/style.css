@@ -268,3 +268,121 @@ footer {
         width: 100%;
     }
 }
+
+
+/* Recursos de acessibilidade */
+.accessibility-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 7%;
+    background: #f2f5f3;
+    border-bottom: 1px solid #cbdacf;
+}
+
+.accessibility-title {
+    margin-right: 0.35rem;
+    color: var(--green-900);
+    font-weight: 700;
+}
+
+.accessibility-tools button {
+    min-height: 40px;
+    padding: 0.45rem 0.75rem;
+    border: 2px solid var(--green-900);
+    border-radius: 6px;
+    color: var(--green-900);
+    background: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.accessibility-tools button:hover,
+.accessibility-tools button:focus-visible {
+    color: #ffffff;
+    background: var(--green-900);
+}
+
+.accessibility-tools button:focus-visible {
+    outline: 3px solid #e2b84b;
+    outline-offset: 3px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+html.high-contrast,
+html.high-contrast body {
+    color: #ffffff;
+    background: #000000;
+}
+
+html.high-contrast .site-header,
+html.high-contrast .accessibility-tools,
+html.high-contrast .form-card,
+html.high-contrast .form-page,
+html.high-contrast .content-section,
+html.high-contrast .support-section {
+    color: #ffffff;
+    background: #000000;
+    border-color: #ffff00;
+}
+
+html.high-contrast .hero,
+html.high-contrast footer {
+    color: #ffffff;
+    background: #000000;
+    border-top: 2px solid #ffff00;
+    border-bottom: 2px solid #ffff00;
+}
+
+html.high-contrast h1,
+html.high-contrast h2,
+html.high-contrast p,
+html.high-contrast label,
+html.high-contrast legend,
+html.high-contrast .brand,
+html.high-contrast nav a,
+html.high-contrast .accessibility-title,
+html.high-contrast .form-intro,
+html.high-contrast .required-note,
+html.high-contrast .cancel-link {
+    color: #ffff00;
+}
+
+html.high-contrast a,
+html.high-contrast .button,
+html.high-contrast .accessibility-tools button {
+    color: #000000;
+    background: #ffff00;
+    border-color: #ffff00;
+}
+
+html.high-contrast input {
+    color: #ffffff;
+    background: #000000;
+    border: 2px solid #ffff00;
+}
+
+html.high-contrast .submit-button {
+    color: #000000;
+    background: #ffff00;
+}
+
+html.high-contrast .message.error,
+html.high-contrast .message.success {
+    color: #ffffff;
+    background: #000000;
+    border: 2px solid #ffff00;
+}
